@@ -51,14 +51,14 @@ git update-ref refs/heads/master 48d2ea321a0f1c35b2799ad853c93115e8ab98d7
 当在一个新目录或已有目录执行`git init` 时，Git 会创建一个 .git 目录。 这个目录包含了几乎所有 Git 存储和操作的对象。
 
 .git目录默认内容如下：
->
-HEAD
-config*
-description
-hooks/ 
-info/
-objects/
-refs/
+
+> HEAD  
+> config  
+> description  
+> hooks/   
+> info/  
+> objects/  
+> refs/  
 
 
 - description文件: 仅供 GitWeb 程序使用
@@ -74,6 +74,7 @@ refs/
     - /refs/tags/: 存储tags
 
 所以，本质上：
+
 - 分支：一个指向某一系列提交之首的指针或引用
 - 当前位置：git status或者git branch命令看到的当前位置就是HEAD文件的内容
 - 切换分支：就是修改HEAD文件的内容，设置新的引用
@@ -102,7 +103,7 @@ Git 是一个内容寻址文件系统。 这意味着，Git 的核心部分是�
 
 ### git对象存储
 
-详见：<https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-Git-%E5%AF%B9%E8%B1%A1>
+详见官方说明：<https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-Git-%E5%AF%B9%E8%B1%A1>
 
 
 前文曾提及，在存储内容时，会有个头部信息一并被保存。 让我们略花些时间来看看 Git 是如何存储其对象的。 通过在 Ruby 脚本语言中交互式地演示，你将看到一个数据对象——本例中是字符串“what is up, doc?”——是如何被存储的。
