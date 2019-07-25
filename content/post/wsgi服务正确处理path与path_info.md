@@ -11,7 +11,7 @@ tags:
 
 需要把原app1.yy.com,app2.yy.com.. 的域名合并成xx.yy.com/app1 , xx.yy.com/app2的部署方式，在测试合并域名部署时，发现前端发来的请求，个别页面报错，观察到的情况是
 
-1. 前端请求http://xxx.yy.com/app1/api/get_order，希望获得app1服务的/api/get_order的接口
+1. 前端请求http://xxx.yy.com/app1/api/get_order， 希望获得app1服务的/api/get_order的接口
 2. 而后端对此返回HTTP 301,重定向到了http://xxx.yy.com/api/get_order/
 3. 前端服务访问http://xxx.yy.com/api/get_order/， Nginx无法找到/api/get_order/，于是返回404
 
