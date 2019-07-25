@@ -1,6 +1,8 @@
 ---
 title: "Wsgi服务正确处理path与path_info"
 date: 2019-07-25T15:51:15+08:00
+tags:
+  - Python
 ---
 
 
